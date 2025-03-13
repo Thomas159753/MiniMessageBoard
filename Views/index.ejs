@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejs Example</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>User</th>
+            <th>Messages</th>
+            <th>Date</th>
+        </tr>
+        <% for (let i = 0; i < messages.length; i++) { %>
+            <tr>
+                <td><%= messages[i].user %></td>
+                <td><%= messages[i].text %></td>
+                <td><%= messages[i].added %></td>
+            </tr>
+        <% } %>        
+    </table>
+    <span><a href="/new">New Message</a></span>
+</body>
+</html>
